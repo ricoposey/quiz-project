@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jeu de Quiz à Choix Multiple</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <nav>
+        <ul>
+            <li><a href="#" onclick="showQuiz()">Quiz</a></li>
+            <li><a href="#" onclick="showScore()">Score</a></li>
+            <li><a href="#" onclick="showAbout()">À propos</a></li>
+            <li><a href="#" onclick="showContact()">Contact</a></li>
+        </ul>
+    </nav>
+    
+    <header>
+        <h1>Quiz de Culture Générale</h1>
+        <p>Mettez vos connaissances à l'épreuve !</p>
+    </header>
+    
+    <div id="quiz-container" style="display: none;">
+        <h1>Quiz de Culture Générale</h1>
+        <div id="score">Score: 0</div>
+        <div id="question"></div>
+        <div id="choices"></div>
+        <button id="next-button" style="display:none;">Suivant</button>
+    </div>
+
+    <div id="score-section" style="display: none;">
+        <p id="final-score"></p>
+        <button onclick="restartGame()">Rejouer</button>
+    </div>
+    
+    
+    <div id="score-container" style="display: none;">
+        <h2>Votre Score</h2>
+        <p id="final-score"></p>
+        <button onclick="showQuiz()">Retour au Quiz</button>
+    </div>
+    
+    
+    <section id="about-container" style="display: none;">
+        <h2>À propos</h2>
+        <p>Bienvenue dans notre jeu de quiz ! Voici comment cela fonctionne :</p>
+        <h3>Fonctionnement du jeu</h3>
+        <p>
+            Le jeu est divisé en trois niveaux de difficulté. À chaque niveau, vous devez répondre à un certain nombre de questions pour passer au niveau suivant. 
+            Vos réponses sont évaluées et vous accumulez des points en fonction de vos réponses correctes.
+        </p>
+        <h3>Scores et niveaux</h3>
+        <p>
+            Vous pouvez suivre votre score actuel à tout moment. Pour passer au niveau suivant, vous devez atteindre un certain score minimum. 
+            Votre meilleur score est également enregistré pour vous permettre de vous améliorer.
+        </p>
+        <button onclick="showQuiz()">Retour au Quiz</button>
+    </section>
+
+    <section id="contact-container" style="display: none;">
+        <h2>Contactez-moi</h2>
+        <p>Si vous avez des questions ou des commentaires, n'hésitez pas à m'écrire :</p>
+        <form id="contact-form">
+            <label for="name">Nom :</label>
+            <input type="text" id="name" required>
+    
+            <label for="email">Email :</label>
+            <input type="email" id="email" required>
+    
+            <label for="message">Message :</label>
+            <textarea id="message" rows="4" required></textarea>
+    
+            <button type="submit">Envoyer</button>
+        </form>
+        <button onclick="showQuiz()">Retour au Quiz</button>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Quiz App. Tous droits réservés.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

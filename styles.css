@@ -1,0 +1,250 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    text-align: center;
+    padding: 20px;
+}
+
+html, body {
+    margin: 0; /* Enlève les marges par défaut */
+    padding: 0; /* Enlève les paddings par défaut */
+    width: 100%; /* S'assure que le body prend toute la largeur */
+    overflow-x: hidden; /* Évite le défilement horizontal si nécessaire */
+}
+
+nav {
+    background-color: #333; /* Couleur de fond de la navbar */
+    overflow: hidden; /* Pour éviter que le contenu déborde */
+    position: fixed; /* Fixe la navbar en haut */
+    top: 0; /* Positionne la navbar en haut */
+    width: 100%; /* Prend toute la largeur */
+    z-index: 1000; /* Assure que la navbar est au-dessus des autres éléments */
+}
+
+nav ul {
+    list-style-type: none; /* Enlève les puces */
+    padding: 0; /* Enlève le padding */
+    margin: 0; /* Enlève la marge */
+    display: flex; /* Utilise Flexbox pour le centrage */
+    justify-content: center; /* Centre les éléments horizontalement */
+}
+
+nav ul li {
+    margin: 0 15px; /* Espace entre les éléments de la navbar */
+}
+
+nav ul li a {
+    display: block; /* Fait des liens des blocs cliquables */
+    color: white; /* Couleur du texte */
+    text-align: center; /* Centre le texte */
+    padding: 14px 16px; /* Ajoute de l'espacement autour des liens */
+    text-decoration: none; /* Enlève le soulignement */
+}
+
+nav ul li a:hover {
+    background-color: #4CAF50; /* Change la couleur de fond au survol */
+}
+
+
+header {
+    background-color: #4CAF50; /* Couleur de fond du header */
+    color: white; /* Couleur du texte */
+    padding: 10px; /* Espacement */
+    text-align: center; /* Centrer le texte */
+}
+
+footer {
+    background-color: #333; /* Couleur de fond du footer */
+    color: white; /* Couleur du texte */
+    text-align: center; /* Centrer le texte */
+    padding: 10px; /* Espacement */
+    position: fixed; /* Fixer le footer en bas de la page */
+    left: 0;
+    bottom: 0;
+    width: 100%; /* Largeur complète */
+}
+
+
+
+#quiz-container, #score-container {
+    padding: 20px; /* Ajoute de l'espacement autour du contenu */
+    margin-top: 20px; /* Ajoute de l'espacement au-dessus */
+}
+
+
+#quiz-container {
+    background: white;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    max-width: 600px;
+    margin: auto;
+}
+
+button {
+    display: block; /* Pour s'assurer que le bouton prend toute la largeur */
+    margin: 20px auto; /* Centre le bouton */
+    padding: 10px 20px; /* Ajoute un peu de remplissage */
+    background-color: #007bff; /* Couleur de fond du bouton */
+    color: white; /* Couleur du texte */
+    border: none; /* Enlève la bordure */
+    border-radius: 5px; /* Bordures arrondies */
+    cursor: pointer; /* Change le curseur au survol */
+}
+button:hover {
+    background-color: #0056b3; /* Couleur au survol */
+}
+
+
+#choices button {
+    display: block;
+    margin: 10px auto;
+    padding: 10px;
+    width: 80%;
+}
+
+h1 {
+    margin-top: 60px; /* Ajuste cette valeur en fonction de la hauteur de ta navbar */
+    text-align: center; /* Centrer le titre si nécessaire */
+}
+
+
+#about-container {
+    background: white;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    max-width: 600px;
+    margin: 20px auto; /* Centre le conteneur */
+    margin-bottom: 100px; /* Ajuste la marge selon la taille de ton footer */
+    text-align: left;
+    position: relative; /* Permet d'ajuster la position */
+    
+}
+
+
+#about h2 {
+    text-align: center;
+}
+
+
+/* Pour les petits écrans (moins de 600px de large) */
+@media (max-width: 600px) {
+    /* Réduire la taille du conteneur */
+    #quiz-container, #contact-container {
+        width: 100%; /* Utilise toute la largeur de l'écran */
+        padding: 10px; /* Réduire le padding */
+    }
+    
+    /* Ajuster la taille des textes pour les rendre plus lisibles */
+    h1, h2, h3 {
+        font-size: 1.5em; /* Réduit la taille des titres */
+    }
+
+    p, label {
+        font-size: 1em; /* Réduit la taille des paragraphes */
+    }
+
+    /* Assurer que les boutons et inputs soient bien visibles */
+    button, input {
+        width: 100%; /* Rendre les boutons et inputs adaptatifs */
+        margin-bottom: 10px;
+    }
+    
+    /* Assurer que les questions ou options du quiz ne se chevauchent pas */
+    .quiz-question {
+        font-size: 1.1em;
+        margin-bottom: 10px;
+    }
+
+    /* Masquer les éléments inutiles pour gagner de l'espace */
+    .header-title, .footer {
+        display: none; /* Si vous avez des éléments comme des titres ou des pieds de page non essentiels */
+    }
+}
+
+/* Ajustements spécifiques pour les petits écrans */
+@media (max-width: 360px) {
+    /* Réduire encore la taille du conteneur */
+    #quiz-container, #contact-container, #about-container {
+        width: 100%; /* Assure que le conteneur utilise toute la largeur */
+        padding: 5px; /* Réduire encore le padding */
+    }
+
+    /* Ajuster la taille des textes */
+    h1, h2, h3 {
+        font-size: 1.2em; /* Réduire encore la taille des titres */
+    }
+
+    p, label {
+        font-size: 0.9em; /* Réduire légèrement la taille des paragraphes */
+    }
+
+    /* Assurer que les boutons ne débordent pas */
+    button, input {
+        width: 100%; /* Assure que les boutons et inputs prennent toute la largeur */
+        padding: 8px; /* Réduire légèrement le padding */
+        font-size: 0.9em; /* Réduire la taille du texte dans les boutons */
+    }
+
+    /* Ajuster la taille des questions */
+    .quiz-question {
+        font-size: 1em; /* Réduire encore la taille des questions */
+        margin-bottom: 5px; /* Réduire l'espacement en dessous */
+    }
+
+    /* Ajuster les marges du body pour éviter tout débordement */
+    body {
+        padding: 10px;
+    }
+
+    /* Masquer les éléments non essentiels pour économiser de l'espace */
+    .header-title, .footer {
+        display: none; /* Masque le titre ou le pied de page si nécessaire */
+    }
+
+    /* Réduire l'espacement entre les éléments de navigation */
+    nav ul li {
+        margin: 0 10px; /* Réduire l'espacement horizontal entre les éléments */
+    }
+
+    nav ul li a {
+        padding: 10px 12px; /* Réduire le padding des liens dans la navbar */
+        font-size: 0.9em; /* Réduire la taille des textes des liens */
+    }
+}
+
+
+@media (max-width: 392px) {
+    /* Réduire la taille du conteneur */
+    #quiz-container, #contact-container {
+        width: 100%; /* Utilise toute la largeur de l'écran */
+        padding: 10px; /* Réduire le padding */
+    }
+    
+    /* Ajuster la taille des textes pour les rendre plus lisibles */
+    h1, h2, h3 {
+        font-size: 1.5em; /* Réduit la taille des titres */
+    }
+
+    p, label {
+        font-size: 1em; /* Réduit la taille des paragraphes */
+    }
+
+    /* Assurer que les boutons et inputs soient bien visibles */
+    button, input {
+        width: 100%; /* Rendre les boutons et inputs adaptatifs */
+        margin-bottom: 10px;
+    }
+    
+    /* Assurer que les questions ou options du quiz ne se chevauchent pas */
+    .quiz-question {
+        font-size: 1.1em;
+        margin-bottom: 10px;
+    }
+
+    /* Masquer les éléments inutiles pour gagner de l'espace */
+    .header-title, .footer {
+        display: none; /* Si vous avez des éléments comme des titres ou des pieds de page non essentiels */
+    }
+}
